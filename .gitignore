@@ -1,4 +1,7 @@
-**/obj/**
+
 **/bin/**
+**/obj/**
 **/.idea/**
 *.DotSettings.user
+
+src/Demolite.Db/Demolite.Db/obj/

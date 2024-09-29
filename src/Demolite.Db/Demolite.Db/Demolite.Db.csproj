@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Demolite.Db</RootNamespace>
         <PackageId>Demolite.Db</PackageId>
-        <Version>0.0.2</Version>
+        <Version>0.0.3</Version>
         <Title>Lite.Db</Title>
         <Authors>Demolite</Authors>
         <RepositoryUrl>https://github.com/d3molite/DemoliteDb</RepositoryUrl>

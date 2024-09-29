@@ -5,7 +5,7 @@
   },
   "projects": {
     "E:\\Code Projects\\C#\\DemoliteDb\\src\\Demolite.Db\\Demolite.Db\\Demolite.Db.csproj": {
-      "version": "1.0.0",
+      "version": "0.0.2",
       "restore": {
         "projectUniqueName": "E:\\Code Projects\\C#\\DemoliteDb\\src\\Demolite.Db\\Demolite.Db\\Demolite.Db.csproj",
         "projectName": "Demolite.Db",
@@ -20,7 +20,6 @@
           "net8.0"
         ],
         "sources": {
-          "E:\\Code Projects\\NUGET\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

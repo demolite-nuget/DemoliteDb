@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 namespace Demolite.Db.Repositories;
 
 public abstract partial class AbstractBaseRepository<T, TContext> : IAbstractBaseRepository<T>
-	where T : class, IHasOperation
+	where T : class, IDbItem, IHasOperation
 	where TContext : DbContext
 {
 	/// <inheritdoc />
 	public T? Get(string id)
 	{
 		using var db = GetContext();
-		return Include(db.Set<T>()).Find(id);
+		return Include(db.Set<T>()).FirstOrDefault(x => x.Id == id);
 	}
 
     /// <inheritdoc />

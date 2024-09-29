@@ -9,23 +9,22 @@ namespace Demolite.Db.Repositories;
 
 public abstract partial class AbstractBaseRepository<T, TContext>
 {
-	
 	/// <summary>
 	/// Override this method to include navigation properties for items.
 	/// Only works for get calls, as saving automatically included entities can cause tracking conflicts.
 	/// </summary>
 	/// <param name="dbSet">Retrieved db set for the entity.</param>
 	/// <returns>The db set with included entities.</returns>
-	protected virtual DbSet<T> Include(DbSet<T> dbSet)
+	protected virtual IQueryable<T> Include(DbSet<T> dbSet)
 	{
-		return dbSet;
+		return dbSet.AsQueryable();
 	}
 	
 	/// <inheritdoc />
 	public async Task<T?> GetAsync(string id)
 	{
 		await using var db = await GetContextAsync();
-		return await Include(db.Set<T>()).FindAsync(id);
+		return await Include(db.Set<T>()).FirstOrDefaultAsync(x => x.Id == id);
 	}
 
     /// <inheritdoc />

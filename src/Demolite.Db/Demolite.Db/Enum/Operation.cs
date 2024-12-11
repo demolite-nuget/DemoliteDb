@@ -2,8 +2,8 @@
 
 public enum Operation
 {
+	None,
 	Created,
 	Updated,
 	Removed,
-	None,
 }

@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using Demolite.Db.Enum;
 using Demolite.Db.Interfaces;
-using Lite.Db.Result;
+using Demolite.Db.Result;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demolite.Db.Repositories;

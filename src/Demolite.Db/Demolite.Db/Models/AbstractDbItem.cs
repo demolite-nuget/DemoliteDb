@@ -13,5 +13,5 @@ public class AbstractDbItem : IDbItem
 	public string Id { get; set; } = Guid.NewGuid().ToString();
 
 	[NotMapped]
-	public Operation OperationType { get; set; }
+	public Operation OperationType { get; set; } = Operation.None;
 }

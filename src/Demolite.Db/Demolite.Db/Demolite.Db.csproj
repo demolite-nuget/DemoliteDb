@@ -6,8 +6,8 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Demolite.Db</RootNamespace>
         <PackageId>Demolite.Db</PackageId>
-        <Version>0.0.3</Version>
-        <Title>Lite.Db</Title>
+        <Version>0.1.0</Version>
+        <Title>Demolite.Db</Title>
         <Authors>Demolite</Authors>
         <RepositoryUrl>https://github.com/d3molite/DemoliteDb</RepositoryUrl>
         <PackageTags>entityframework, entityframework core, wrapper, repository, efcore, ef</PackageTags>
@@ -19,8 +19,7 @@
 
     <ItemGroup>
         <None Include="..\..\..\README.md" Pack="true" PackagePath="\"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8"/>
-        <PackageReference Include="Serilog" Version="4.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
     </ItemGroup>
 
 </Project>

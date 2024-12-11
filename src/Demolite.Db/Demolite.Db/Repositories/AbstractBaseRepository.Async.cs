@@ -1,9 +1,8 @@
 ﻿using System.Linq.Expressions;
 using Demolite.Db.Enum;
 using Demolite.Db.Interfaces;
-using Lite.Db.Result;
+using Demolite.Db.Result;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
 
 namespace Demolite.Db.Repositories;
 
@@ -106,7 +105,6 @@ public abstract partial class AbstractBaseRepository<T, TContext>
 		}
 		catch (Exception ex)
 		{
-			Log.Error(ex, "Error while saving {Type}", typeof(T));
 			return DbResult<T>.Failed(item, ex.Message);
 		}
 	}

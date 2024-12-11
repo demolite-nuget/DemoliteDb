@@ -1,6 +1,6 @@
 # Demolite.Db
 
-Demolite.Db is a simple database wrapper package utilizing EF Core and Serilog.
+Demolite.Db is a simple database wrapper package utilizing EF Core.
 It is meant to reduce the amount of boilerplate code needed for creating new projects and for handling db operations.
 
 Using this package works as follows:
@@ -36,3 +36,8 @@ In this example, a context factory is injected, but you can use any method to in
 ```
 
 6. Now just register the repository in your DI and it is ready to use.
+
+## Updates:
+### v0.1.0: 
+- Removed dependency on Serilog
+- Updated EF Core to address vulnerability CVE-2024-43483

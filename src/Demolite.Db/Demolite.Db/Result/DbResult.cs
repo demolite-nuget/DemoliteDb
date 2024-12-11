@@ -1,6 +1,6 @@
 ﻿using Demolite.Db.Interfaces;
 
-namespace Lite.Db.Result;
+namespace Demolite.Db.Result;
 
 public class DbResult<T> : IDbResult<T>
 {

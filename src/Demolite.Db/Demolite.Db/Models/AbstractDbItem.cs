@@ -1,17 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Demolite.Db.Enum;
+using System.ComponentModel.DataAnnotations;
 using Demolite.Db.Interfaces;
 
 namespace Demolite.Db.Models;
 
-public class AbstractDbItem : IDbItem
+/// <summary>
+/// Base class for entities with a primary key of type <typeparamref name="TKey" />.
+/// Override <see cref="Id" /> to customize key generation, e.g. with <c>DatabaseGenerated</c>.
+/// </summary>
+/// <typeparam name="TKey">The type of the primary key.</typeparam>
+public abstract class AbstractDbItem<TKey> : IDbItem<TKey>
+	where TKey : notnull
 {
-	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+	/// <inheritdoc />
 	[Key]
-	[Column(Order = 0)]
-	public string Id { get; set; } = Guid.NewGuid().ToString();
-
-	[NotMapped]
-	public Operation OperationType { get; set; } = Operation.None;
+	public virtual TKey Id { get; set; } = default!;
 }
+
+/// <summary>
+/// Base class for entities with an <see cref="int" /> primary key.
+/// </summary>
+public abstract class AbstractDbItem : AbstractDbItem<int>;
